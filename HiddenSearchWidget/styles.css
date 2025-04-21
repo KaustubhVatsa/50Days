@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to right,
+    rgb(151, 86, 243),
+    rgb(105, 57, 172)
+  );
+}
+
+.search {
+  position: relative;
+  height: 50px;
+}
+
+.btn {
+  background-color: #fff;
+  border: 0;
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+  transition: transform 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.btn:focus,
+input:focus {
+  outline: none;
+}
+.search.active input {
+  width: 200px;
+}
+.search.active .btn {
+  transform: translateX(198px);
+}
+.search input {
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  font-size: 18px;
+  padding: 15px;
+  transition: width 0.4s ease;
+  border: 0;
+}
